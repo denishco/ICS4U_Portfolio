@@ -1,0 +1,131 @@
+//HEY HOW MONAY BOOKS DO YOU WANNA SEE ON THE THING???
+//MAXIMUM 12
+var bookQuan = 12;
+
+
+var books= [
+    {
+        title: "The Giver",
+        author: "Lois Lowry",
+        stars: 4
+    },{
+        title: "The Secret",
+        author: "Rhonda Byr",
+        stars: 3
+    },{
+        title: "A Brief  one",
+        author: "Stephen ",
+        stars: 4
+    },{
+        title: "Moby Dick",
+        author: "Herman ",
+        stars: 1
+    },{
+        title: "Airborn",
+        author: "Kenneth ",
+        stars: 1
+    },{
+        title: "Bonk",
+        author: "Luni",
+        stars: 2
+    },{
+        title: "Flex",
+        author: "Cernal",
+        stars: 4
+    },{
+        title: "sebab",
+        author: "lebab",
+        stars: 2
+    },{
+        title: "natural",
+        author: "gege",
+        stars: 4
+    },{
+        title: "substan",
+        author: "Kenneth ",
+        stars: 3
+    },{
+        title: "conkus",
+        author: "Rick",
+        stars: 1
+    },{
+        title: "sickne",
+        author: "boyyy",
+        stars: 2
+    }
+];
+
+
+//function that returns an array with three numbers to make a color
+var randomColor = function(colors){
+    for(var i = 0; i < 3; i++){
+        colors[i] = round(random(0, 255));
+    }
+    return colors;
+};
+
+
+// draw shelf
+var x = 100;
+for(var i = 0; i < 3; i++){
+    fill(173, 117, 33);
+    rect(0, x, width, 10);
+    x+= 100;
+}
+
+var rowPrint = function(row, bookQuan){
+    //defining what row itll be in
+    var yPos;
+    if(row === 1){
+        yPos = 15;
+    }else if(row === 2){
+        yPos = 115;
+    }else if(row === 3){
+        yPos = 215;
+    }
+    
+
+    
+    //making it so that its 4 or less books
+    var runs;
+    if(bookQuan <= 4){
+        runs = bookQuan;
+    }else if(bookQuan <= 8){
+        runs = bookQuan ;
+        var thing;
+    }else if(bookQuan <= 12){
+        runs = bookQuan ;
+    }
+    
+    
+    //Var for star pic
+    var starPic = getImage("cute/Star");
+    
+    //printing the books
+    var x = 0;
+    for(i = 0; i < runs; i++){
+        var colors = [];
+        randomColor(colors);
+        fill(colors[0], colors[1], colors[2]);
+        rect(x, yPos, 75, 85);
+        textSize(15);
+        fill(0, 0, 0);
+        text(books[i].title, x, yPos + 15);
+        textSize(11);
+        fill(0, 0, 0);
+        text("By:" + books[i].author, x, yPos + 30);
+        var u = 0;
+        for(var h = 0; h < books[i].stars; h++){
+            image(starPic, x + u, yPos + 30, 20, 30);
+            u += 15;
+        }
+        x += 100;
+        if(x >= 400){
+            yPos += 100;
+            x = 0;
+        }
+    }
+};
+
+//MAIN CODE CALLING ALL THE REST OF THE FUNCTIONS
+rowPrint(1, bookQuan);
