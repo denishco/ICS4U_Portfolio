@@ -1,0 +1,14 @@
+// define a constant for the LED pin
+const int ledPin = 0;
+ 
+// setup is run just once when the micro:bit starts up
+void setup() {
+  pinMode(ledPin, OUTPUT);    // set the ledPin (pin0) to be an output
+}
+ 
+void loop() {
+  digitalWrite(ledPin, HIGH); // turn the ledPin (and LED) on
+  delay(500);                 // delay for half a second (500 milliseconds)
+  digitalWrite(ledPin, LOW);  // turn the ledPin (and LED) off
+  delay(500);                 // delay for half a second
+}
