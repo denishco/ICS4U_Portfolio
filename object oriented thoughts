@@ -1,0 +1,11 @@
+Object Oriented Design is the concept that forces programmers to plan out their code in order to have a better flowing program
+
+After the analysis phase, the conceptual model is developed further into an object-oriented model using object-oriented design (OOD). In OOD, the technology-independent concepts in the analysis model are mapped onto implementing classes, constraints are identified, and interfaces are designed, resulting in a model for the solution domain. In a nutshell, a detailed description is constructed specifying how the system is to be built on concrete technologies
+
+The stages for object–oriented design can be identified as −
+
+  Definition of the context of the system
+  Designing system architecture
+  Identification of the objects in the system
+  Construction of design models
+  Specification of object interfaces
