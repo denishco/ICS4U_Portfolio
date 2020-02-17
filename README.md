@@ -1,5 +1,4 @@
 # Portfolio
 
-This GitHub repository is all the code of Deniz Erdem's spin off's
-It includes several projects that I have coded throughout my programming career.
-They are coded in html, css, javascript and c
+This GitHub repository is all the code of Deniz Erdem from the highschool course ICS4U
+These projects are coded in languages such as: javascript, java, and p5js
